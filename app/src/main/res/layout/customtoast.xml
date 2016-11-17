@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_dark"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name.."
+            android:textColor="@color/general_white" />
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearHeader">
+
+        <RelativeLayout
+            android:id="@+id/toast_layout_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/custom_toast_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:contentDescription="@string/app_name" />
+
+
+            <TextView
+                android:id="@+id/custom_toast_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_toast_image"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/app_name"
+                android:textColor="@color/general_white"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom_toast_message"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@color/colorAccent"
+                android:orientation="horizontal"
+                android:weightSum="8">
+
+                <Button
+                    android:id="@+id/btn_fav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_weight="3"
+                    android:background="@android:color/white"
+                    android:clickable="true"
+                    android:text="Fav"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/white"
+                    android:clickable="true"
+                    android:text="Cancle"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/buttonHeight"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/white"
+                    android:clickable="true"
+                    android:text="Suggest"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

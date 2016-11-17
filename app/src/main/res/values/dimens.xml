@@ -1,0 +1,15 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="imageWidth">240dp</dimen>
+    <dimen name="textviewName">32sp</dimen>
+    <dimen name="textviewTitle">20sp</dimen>
+
+    <dimen name="buttonHeight">30dp</dimen>
+    <dimen name="imageHeight">100dp</dimen>
+
+    <dimen name="spashView">660dp</dimen>
+</resources>
