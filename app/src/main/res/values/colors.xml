@@ -3,23 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="app_color">#CCEEFF</color>
 
-
-    <color name="hint">#9CC2E4</color>
-    <color name="general_white">#FFFFFF</color>
-    <color name="light_gray">#ffb3b3b3</color>
-    <color name="dark_blue">#235C8B</color>
-    <color name="light_blue">#9CC2E4</color>
-    <color name="blue_dark">#277FF9</color>
-    <color name="light_purple">#DFCBFA</color>
-    <color name="purple">#533483</color>
-    <color name="lite_purple">#9D84C3</color>
-    <color name="sky_blue">#84CFFF</color>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
     <color name="red">#FF0000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="yello">#FFFF00</color>
-    <color name="green">#147F03</color>
-    <color name="app_color">#D790C9</color>
-    <color name="rental_green">#92C94A</color>
+    <color name="pink">#FF00FF</color>
+    <color name="sky">#CCEEFF</color>
+    <color name="npbappcolor">#FBEFF2</color>
+    <color name="green">#00FF00</color>
+    
+    <color name="blue">#0000FF</color>
 </resources>

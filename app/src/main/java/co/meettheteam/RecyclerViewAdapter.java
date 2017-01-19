@@ -6,21 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
-
+/**
+ * Created by dharma on 11/16/16.
+ */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolders> {
 
     private List<User> itemList;
     private Context context;
-    public ImageLoader imageLoader;
     public RecyclerViewAdapter(Context context, List<User> itemList) {
         this.itemList = itemList;
         this.context = context;
-        imageLoader = ImageLoader.getInstance();
-        imageLoader.init(ImageLoaderConfiguration.createDefault(context));
     }
 
     @Override
@@ -35,7 +33,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
     public void onBindViewHolder(RecyclerViewHolders holder, int position) {
         holder.tvUserFLName.setText(itemList.get(position).getFirstName()+" " +itemList.get(position).getLastName());
         holder.tvUserTitle.setText(itemList.get(position).getTitle());
-        imageLoader.displayImage(itemList.get(position).getAvatar(),  holder.imgAvatar);
+        Glide.with(context)
+                .load(itemList.get(position).getAvatar())
+                .into(holder.imgAvatar);
 
 
     }

@@ -13,9 +13,6 @@ import java.io.InputStream;
  */
 
 public class Utils {
-
-
-
     //URL
     public  static  final String URL="http://dharmakshetri.com.np/data/json/team.json";
     // define the json tags

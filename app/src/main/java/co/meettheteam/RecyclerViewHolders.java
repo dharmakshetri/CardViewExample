@@ -2,6 +2,7 @@ package co.meettheteam;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,19 +11,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.bumptech.glide.Glide;
 
 import static co.meettheteam.UserResponse.users;
 
-
+/**
+ * Created by dharma on 11/16/16.
+ */
 public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
     public TextView tvUserFLName;
     public TextView tvUserTitle;
     public ImageView imgAvatar;
-    public ImageLoader imageLoader;
+    Context mcontext;
 
     public RecyclerViewHolders(View itemView) {
         super(itemView);
@@ -31,8 +33,6 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
         tvUserFLName = (TextView) itemView.findViewById(R.id.textviewName);
         tvUserTitle = (TextView) itemView.findViewById(R.id.textviewTitle);
         imgAvatar = (ImageView) itemView.findViewById(R.id.imageviewAvatar);
-        imageLoader = ImageLoader.getInstance();
-        imageLoader.init(ImageLoaderConfiguration.createDefault(itemView.getContext()));
 
 
     }
@@ -50,7 +50,10 @@ public class RecyclerViewHolders extends RecyclerView.ViewHolder implements View
         tvHeader.setText(users.get(getPosition()).getFirstName() + " " + users.get(getPosition()).getLastName());
 
         ImageView imageViewAvatar = (ImageView) dialog.findViewById(R.id.custom_toast_image);
-        imageLoader.displayImage(users.get(getPosition()).getAvatar().toString(), imageViewAvatar);
+        Glide.with((Activity) view.getContext())
+                .load(users.get(getPosition()).getAvatar().toString())
+                .into(imageViewAvatar);
+
 
         TextView text = (TextView) dialog.findViewById(R.id.custom_toast_message);
         text.setText(users.get(getPosition()).getBio().toString());
