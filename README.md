@@ -1,10 +1,15 @@
 # CardViewExample
-Cardview and RecycleView Example
+Cardview and RecyclerView Example
 
-#what is CardView and RecycleView
+#Used 
+1. RecylerView
+2. CardView
+3. Glide
+
+#what is CardView and RecyclerView
 CardView is another major element introduced in Material Design.
 
-#How to add CardView and RecycleView on build.grade 
+#How to add CardView and RecyclerView on build.grade 
 you can use the RecyclerView and CardView widgets on devices that run older versions of 
 Android by adding the following lines to the dependencies section in your project's build.grade
 file as your requiremnts
@@ -23,7 +28,7 @@ dependencies {
         exclude module: 'recyclerview-v7'
     }
     compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:design:25.0.0'
     testCompile 'junit:junit:4.12'
     compile 'com.google.code.gson:gson:2.2.4'
